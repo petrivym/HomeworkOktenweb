@@ -8,7 +8,7 @@ body {
     margin: 0 auto;
 }
 .header {
-    height: 750px;
+    height: 100vh;
     background-image: url("../photo/logo.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -99,7 +99,7 @@ body {
 .footer__container-text{
     display: flex;
     justify-content: start;
-    align-items: center;
+    align-items: flex-end;
     flex-direction: column;
 }
 
