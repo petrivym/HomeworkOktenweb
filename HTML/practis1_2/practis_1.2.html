@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <title>Practis2</title>
     <link rel="stylesheet" href="style/style.css">
-
+    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
 </head>
 <body>
 <div class="container_flex">
     <div class="sidbar">
         <div class="sidbar_wraper">
             <div class="sidbar_img">
-<!--                /static/images/project-logos/ruwiki-1.5x.png-->
+                <a href="">
+                    <span class="sidbar_img_wikipedia">
+
+                    </span>
+                </a>
             </div>
             <div class="sidbar_navigations">
                 <ul class="sidbar_navigations_ul">
@@ -39,7 +43,12 @@
     <div class="top-memu">
         <div class="top-memu_user">
             <ul class="top-memu_ul">
-                <li><span class="top-memu_icon activ_link"><i class="fas fa-address-card"></i></span>Ви не увійшли до системи</li>
+                <li class="activ_link">
+                    <span class="top-memu_icon">
+                         <i class="fas fa-user-alt"></i>
+                    </span>Ви не увійшли до
+                    системи
+                </li>
                 <li><a href=""> Обговорення</a></li>
                 <li><a href=""> Внесок</a></li>
                 <li><a href="">Створити обліковий запис</a></li>
@@ -50,29 +59,29 @@
         <div class="top-menu_nav">
             <div class="top-menu_left">
                 <ul class="top-menu_left_ul">
-                    <li><a class="activ_link" href="">Головна</a></li>
+                    <li class="top-menu_activ-li"><a class="activ_link" href="">Головна</a></li>
                     <li><a href="">Обговорення</a></li>
                 </ul>
             </div>
 
             <div class="top-menu_links">
-                 <div class="top-menu_right">
-                     <ul class="top-menu_left_ul">
-                         <li><a class="activ_link" href="">Читати</a></li>
-                         <li><a href="">Неперевірені зміни</a></li>
-                         <li><a href="">Перегляд</a></li>
-                         <li><a href="">Переглянути історію</a></li>
-                     </ul>
+                <div class="top-menu_right">
+                    <ul class="top-menu_left_ul">
+                        <li class="top-menu_activ-li"><a class="activ_link" href="">Читати</a></li>
+                        <li><a href="">Неперевірені зміни</a></li>
+                        <li><a href="">Перегляд</a></li>
+                        <li><a href="">Переглянути історію</a></li>
+                    </ul>
 
-                 </div>
+                </div>
 
                 <div class="top-menu_search">
                     <div class="top-menu_search_weaper">
-                        <input type="search" placeholder="Пошук у Вікіпедії">
+                        <input class="top-memu_input" type="search" placeholder="Пошук у Вікіпедії">
                     </div>
                     <div class="top-menu_search_button">
                         <button>
-                            \
+                            <i class="fas fa-search"></i>
                         </button>
                     </div>
 
@@ -81,5 +90,6 @@
         </div>
     </div>
 </div>
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
 </body>
 </html>

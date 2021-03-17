@@ -1,9 +1,12 @@
 body {
     margin: 0;
 }
-ul li{
-    list-style:none;
+
+ul li {
+    list-style: none;
+
 }
+
 
 .container_flex {
     display: flex;
@@ -12,6 +15,7 @@ ul li{
 
 .top-memu {
     width: 85%;
+    height: 95px;
 }
 
 .sidbar {
@@ -22,56 +26,107 @@ ul li{
 .top-memu {
     display: flex;
     flex-direction: column;
-    margin-right: 25px;
-    height: 120px;
+
 
 }
-.top-menu_nav{
+
+.top-memu_user {
+    padding-right: 15px;
+}
+
+.top-menu_nav {
     display: flex;
     justify-content: space-between;
-}
-.top-menu_links{
-    display: flex;
-    align-items: center;
+    background-color: #9bbdaf;
 }
 
-.top-menu_left_ul{
-    display: flex;
+.top-menu_nav ul li {
+    border-right: 1px solid #0645ad;
+
 }
-.top-menu_left_ul{
+
+.top-menu_links {
     display: flex;
+    align-items: center;
+    padding-right: 15px;
+}
+
+.top-menu_left_ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
 
 .top-memu_ul {
     display: flex;
     justify-content: flex-end;
+
 }
 
 .top-memu_ul li {
     list-style: none;
-}
-.top-menu_search{
-    display: flex;
-}
-.activ_link{
-    color: #202122!important;
+    padding: 0px 5px;;
+
 }
 
+.top-menu_left_ul li {
+    padding: 18px 10px 5px 10px;
+    background-color: #85e7ff;
+}
+
+.top-menu_search {
+    display: flex;
+    border: 1px solid #a2a9b1;
+    border-radius: 2px;
+    margin-bottom: -9px;
+    margin-left: 15px;
+}
+
+.top-menu_activ-li {
+    border-bottom: 1px solid #fff;
+    background-color: #ffffff !important;
+    border-left: 1px solid #0645ad;
+}
+
+.top-menu_left_ul > .top-menu_activ-li {
+    border-left: none;
+}
+
+.activ_link {
+    color: #54595d !important;
+}
+
+
 /*style top-menu*/
-.top-memu ul li a{
+.top-memu ul li a {
     color: #0645ad;
     font-size: 12px;
     font-family: sans-serif;
     text-decoration: none;
-    padding: 0  8px;
 }
 
-.top-memu ul li a:hover{
+.top-memu ul li a:hover {
     text-decoration: underline;
 }
 
+.top-memu_input {
+    border: none;
+    padding: 7px 43px 1px 5px;
+
+}
+
+.top-menu_search_button button {
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.fa-search {
+    padding: 3px;
+}
 
 
+                   /*sadbar*/
 
 
 
