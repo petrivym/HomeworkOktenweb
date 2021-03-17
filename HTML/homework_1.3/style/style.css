@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+}
+
+.global {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    width: 100vw;
+    height: 30vh;
+    background-color: chocolate;
+}
+
+.content {
+    display: flex;
+}
+
+.container-big {
+    height: 70vh;
+    width: 70vw;
+    background-color: darkblue;
+}
+
+.container-min {
+    height: 70vh;
+    width: 30vw;
+    background-color: cornsilk;
+}
+.padding_20px{
+ box-sizing: border-box;
+}
