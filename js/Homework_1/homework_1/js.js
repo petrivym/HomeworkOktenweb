@@ -509,8 +509,6 @@
 //     Если светофор в аварийном режиме вывести "делай что хочешь"!
 //
 
-
-
 // const isRoadClear = confirm('Have a car in the road');
 // const valueTrafficLight = prompt("Enter value Trafic Light");
 //
