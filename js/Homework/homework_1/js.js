@@ -448,15 +448,16 @@
 //     За допомоги if else вивести іх в порядку зростання. (відсортувати по зростанню)
 //
 
-let one = prompt("Enter namber");
-let second = prompt("Enter namber");
-let third = prompt("Enter namber");
-
-
-if(one > second){
-    let x = "-";
-
-}
+// let one = prompt("Enter namber");
+// let second = prompt("Enter namber");
+// let third = prompt("Enter namber");
+//
+//
+//
+// if(one > second){
+//     let x = "-";
+//
+// }
 
 
 
