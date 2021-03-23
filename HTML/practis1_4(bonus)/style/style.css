@@ -23,10 +23,6 @@
     margin: 0 auto;
 }
 
-.logo {
-    weight:;
-}
-
 nav {
     display: flex;
     flex-grow: 1;
@@ -68,6 +64,7 @@ nav {
 
 .first_scren {
     display: flex;
+    justify-content: space-between;
     padding: 93px 101px 93px 245px;
 }
 
@@ -77,7 +74,7 @@ nav {
 
 .first-scren_left h3 {
     color: #FF9638;
-    font-weight: 800;
+    font-weight: 900;
     font-size: 19px;
     line-height: 23px;
     text-transform: uppercase;
@@ -96,10 +93,6 @@ nav {
 }
 
 .first-scren_text {
-
-}
-
-.first-scren_text {
     margin-top: 60px;
     font-weight: 500;
     font-size: 16px;
@@ -109,13 +102,97 @@ nav {
 
 .first-scren_text p:last-child {
     font-weight: bold;
+    margin-top: 40px;
+}
+
+.first_scren button {
+    margin-top: 120px;
+    height: 61px;
+    width: 382px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #292929;
+    border-radius: 5px;
+    background-color: #FF9638;
+    border: none;
 }
 
 
+.first-scren_right {
+    position: relative;
+    width: 45%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.first-scren_right img {
+    width: 100%;
+}
+
+.first-scren_wraper, .first-scren_button, .first-scren_play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.first-scren_position{
+    position: absolute;
+    left: -180px;
+    bottom: -15px;
+}
+
+.first-scren_wraper {
+    position: relative;
+    width: 152px;
+    height: 152px;
+    border: 1px solid #FF9638;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.first-scren_button {
+    width: 96px;
+    height: 96px;
+    border: 1px solid #FF9638;
+    border-radius: 50%;
+}
+
+.first-scren_play {
+    width: 82px;
+    height: 82px;
+    border: 3px solid #FF9638;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.first-scren_wraper  ::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: red;
+    opacity: 0;
+    animation: xxx 1500ms ease-out infinite;
+    z-index: -1;
+}
 
 
+.first-scren_play i {
+    font-size: 22px;
+    color: #fff;
+}
 
+@keyframes xxx {
 
-
-
-
+0% {
+    opacity: 0
+;
+}
+100% {
+    opacity: 0.8;
+    transform: scale(1.2);
+}
+}
