@@ -94,7 +94,7 @@
 // const LOKATION = 'UA';
 // const MY_NAME = 'YARIK';
 // const CITY = 'LVIV';
-//
+
 // console.log(PI);
 // console.log(START_FIB);
 // console.log(MY_BIRTH);
@@ -448,40 +448,99 @@
 //     За допомоги if else вивести іх в порядку зростання. (відсортувати по зростанню)
 //
 
-// let one = prompt("Enter namber");
-// let second = prompt("Enter namber");
-// let third = prompt("Enter namber");
+
+// let a = +prompt("Enter namber");
+// let b = +prompt("Enter namber");
+// let c = +prompt("Enter namber");
 //
 //
-//
-// if(one > second){
-//     let x = "-";
-//
+// if (a >= b && a >= c && c >= b) {
+//     document.write(`<br>${b} <br>${c} <br>${a} `);
+// } else if (a >= b && a >= c && b >= c) {
+//     document.write(`<br>${c} <br>${b} <br>${a} `);
+// } else if (b >= a && b >= c && c >= a) {
+//     document.write(`<br>${a} <br>${c} <br>${b} `);
+// } else if (b >= a && b >= c && c <= a) {
+//     document.write(`<br>${c} <br>${a} <br>${b} `);
+// } else if (c >= a && c >= b && a >= b) {
+//     document.write(`<br>${b} <br>${a} <br>${c} `);
+// } else if (c >= a && c >= b && a <= b) {
+//     document.write(`<br>${a} <br>${b} <br>${c} `);
 // }
 
 
 
 
-// 2.
-// Все параматры получаем с клавиатуры!!!!
+
+// 2. Все параматры получаем с клавиатуры!!!!
 //     Имитируем поведение пешехода на перекстке.
 //     Если светофор зеленый - вывести "иди".
 //     Если светофор желтый - вывести "подожди".
 //     Если светофор красный - вывести "стой".
 //     Если светофор в аварийном режиме вывести "делай что хочешь"!
-//
+
+// const valueTrafficLight = prompt("Enter value Trafic Light");
+
+// switch (valueTrafficLight) {
+//     case 'green' :
+//         console.log('go');
+//         break;
+//     case 'yellow' :
+//         console.log('wait');
+//         break;
+//     case 'red':
+//         console.log('stop');
+//         break;
+//     default:
+//         console.log('do what you want')
+// }
+
+
 //     3
 // Все параметры получаем с клавиатуры!!!!(prompt , confirm)
 // Создать переменную isRoadClear которая характеризирует наличие на дороге машин.
 //     Улучшаем предыдущее задание.
 //     Если светофор зеленый и машин нет - вывести "иди".
 //     Если светофор зеленый и машины есть  - вывести подожди пока нарушители проедут".
-// Если светофор желтый и машины есть - вывести "жди".
+//     Если светофор желтый и машины есть - вывести "жди".
 //     Если светофор желтый и машин нет - вывести "все рано жди".
 //     Если светофор красный и машин нет- вывести "стой все рано".
 //     Если светофор красный - и машины есть вывести "стой и жди".
 //     Если светофор в аварийном режиме вывести "делай что хочешь"!
 //
+
+
+
+// const isRoadClear = confirm('Have a car in the road');
+// const valueTrafficLight = prompt("Enter value Trafic Light");
+//
+//     switch (valueTrafficLight) {
+// case 'green' :
+//     if(isRoadClear){
+//         console.log('please wait for violators to pass');
+//     }else {
+//         console.log('go');
+//     }
+//     break;
+// case 'yellow' :
+//     if(isRoadClear){
+//       console.log('wait')
+//     }else {
+//         console.log('slill wait');
+//     }
+//     break;
+// case 'red':
+//     if(isRoadClear){
+//         console.log('Stop and wait')
+//     }else {
+//         console.log('stay up early');
+//     }
+//     break;
+// default:
+//     console.log('do what you want')
+// }
+
+
 
 
 
