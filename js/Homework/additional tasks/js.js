@@ -2,12 +2,6 @@
 // Cоздать функцию которая принимает число и возвращает  текст как в примере:
 //     3275  —>  "3000 + 200 + 70 +5"
 
-function
-
-
-
-
-
 
 // Дан массив целых чисел, найдите тот, который встречается нечетное количество раз.Всегда будет только одно целое число, которое встречается нечетное количество раз
 //     [1,2,3,4,5,2,4,1,3] -> 5
@@ -30,7 +24,6 @@ function
 //     }
 //
 // }
-
 
 
 // Знайти анаграму.
@@ -79,6 +72,38 @@ function
 //     }
 // }
 
+
+// for (let i = 0; i < 10; i++) {
+//     let div = document.createElement('div');
+//      div.innerText = `iteration ${i}`;
+//     document.body.appendChild(div);
+// }
+// users = [
+//     {name: 'yarik', color: 'red', age: 23, status: true},
+//     {name: 'oleg', color: 'yellow', age: 21, status: false},
+//     {name: 'Andriy', color: 'gold', age: 27, status: true},
+//     {name: 'yarik', color: '#567', age: 23, status: true},
+//     {name: 'oleg', color: '#459', age: 21, status: false},
+//     {name: 'Andriy', color: '#998   ', age: 27, status: true}
+// ]
+//
+//
+// let conteiner = document.getElementById('container');
+//
+//
+// for (const user of users) {
+//     let outerDiv = document.createElement('div');
+//     outerDiv.classList.add('user');
+//
+//     for (const userObj in user) {
+//         let innerDiv = document.createElement('div');
+//         innerDiv.classList.add(userObj)
+//         innerDiv.innerText = `${user[userObj]}`
+//         outerDiv.appendChild(innerDiv);
+//     }
+//
+//     conteiner.appendChild(outerDiv);
+// }
 
 
 
