@@ -439,12 +439,12 @@
 //         },
 //         // TO BE CONTINUED .....
 //     ]
-//     let usersWithId = [
-//         {id: 1, name: 'vasya', age: 31, status: false},
-//         {id: 2, name: 'petya', age: 30, status: true},
-//         {id: 3, name: 'kolya', age: 29, status: true},
-//         {id: 4, name: 'olya', age: 28, status: false}
-//     ];
+// let usersWithId = [
+//     {id: 1, name: 'vasya', age: 31, status: false},
+//     {id: 2, name: 'petya', age: 30, status: true},
+//     {id: 3, name: 'kolya', age: 29, status: true},
+//     {id: 4, name: 'olya', age: 28, status: false}
+// ];
 //
 // let citiesWithId = [
 //     {user_id: 3, country: 'USA', city: 'Portland'},
@@ -454,8 +454,11 @@
 // ];
 //
 //
-// let usersWithCities = [];
 
+
+//
+// let usersWithCities = [];
+//
 // for (let i = 0; i < usersWithId.length; i++) {
 //     for (let j = 0; j <citiesWithId.length ; j++) {
 //         if(usersWithId[i].id == citiesWithId[j].user_id){
@@ -476,20 +479,19 @@
 //
 // console.log(usersWithCities);
 
+// let usersWithCities = [];
+// for (const userId of usersWithId) {
+//     for (const userCities of citiesWithId) {
+//         if (userId.id == userCities.user_id) {
+//             userId.address = userCities;
+//             usersWithCities.push(userId);
+//         }
+//     }
+//
+// }
+// console.log(usersWithCities);
 
 
-
-
-let userWithAddres = [];
-for (const user of usersWithId) {
-    for (const city of citiesWithId) {
-        if (user.id === city.user_id) {
-            user.address = city;
-            userWithAddres.push(user);
-        }
-    }
-}
-console.log(userWithAddres);
 
 
 

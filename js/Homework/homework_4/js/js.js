@@ -403,25 +403,25 @@
 // zeroingZeroing([0, 0, 0, 1])
 
 
-function zeroingZeroing(array) {
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] == 0) {
-            const splitArray = array.splice(i, 1);
-            array.push(splitArray[0])
-            safeguard++;
-        }
-        if (array[i] == 0) {
-            i--;
-            safeguard++;
-        }
-
-    }
-    console.log(array);
-}
-
-zeroingZeroing([1,0,6,0,3])
-zeroingZeroing([0,1,2,3,4])
-zeroingZeroing([0, 0, 0, 1])
+// function zeroingZeroing(array) {
+//     for (let i = 0; i < array.length; i++) {
+//         if (array[i] == 0) {
+//             const splitArray = array.splice(i, 1);
+//             array.push(splitArray[0])
+//             safeguard++;
+//         }
+//         if (array[i] == 0) {
+//             i--;
+//             safeguard++;
+//         }
+//
+//     }
+//     console.log(array);
+// }
+//
+// zeroingZeroing([1,0,6,0,3]);
+// zeroingZeroing([0,1,2,3,4]);
+// zeroingZeroing([0, 0, 0, 1]);
 
 
 // - Дано список імен.
@@ -432,6 +432,21 @@ zeroingZeroing([0, 0, 0, 1])
 // let n1 = 'Harry Potter'
 // let n2 = 'Ron Whisley'
 // let n3 = 'Hermione Granger'
+
+// let n1 = '    Harry       Potter      '
+// let n2 = '    Ron       Whisley      '
+// let n3 = '    Hermione       Granger      '
+// function removeName(string){
+//     let stringWithoutSpaceStartEnd  =  string.trim();
+//     let arrayWithSpace = stringWithoutSpaceStartEnd.split(' ');
+//     return  `${arrayWithSpace[0]} ${arrayWithSpace[arrayWithSpace.length-1]}`
+//
+// }
+//
+// console.log(removeName(n1));
+// console.log(removeName(n2));
+// console.log(removeName(n3));
+
 //
 // ============================================================================================
 //
@@ -440,12 +455,85 @@ zeroingZeroing([0, 0, 0, 1])
 // // ******************* НАЗАД В МИНУЛЕ *********************** //
 // Створити функцію яка :
 // - Додає в боді блок з текстом "Hello owu"
+
+
+// function addText(){
+//     let newElementInBody = document.createElement('div');
+//     newElementInBody.innerText = "Hello owu";
+//     document.body.appendChild(newElementInBody);
+// }
+// addText();
+
+
 // - Додає в боді елемент з текстом . Тип елементу та текст отримати через аргументи
-// - приймає масив автомобілів (можна взяти з попередніх дз ),та  індентифікатор елемнту в який потрібно додати список цих автомобілів.
+//
+// function addText(){
+//     let newElementInBody = document.createElement(arguments[0]);
+//     newElementInBody.innerText = arguments[1];
+//     document.body.appendChild(newElementInBody);
+// }
+// addText('h1','text');
+
+// - приймає масив автомобілів (можна взяти з попередніх дз),та  індентифікатор елемнту в який потрібно додати список цих автомобілів.
 // Для кожного автомобіля створити свій блок, та додати його в елемент, індентифікатор якого ви отримали. Всі властивості авто в обному блоці
+
+
+// cars = ['bmw', 'mercedes', 'audi', 'honda', 'toyota'];
+//
+// let divElement = document.createElement('div');
+// divElement.setAttribute('id', 'myId');
+// document.body.appendChild(divElement);
+//
+// function returnCars(cars = [], div = 'string') {
+//     for (let i = 0; i < cars.length; i++) {
+//         let element = document.createElement('p');
+//         element.innerText = cars[i];
+//
+//         let elementById = document.getElementById(div);
+//         elementById.appendChild(element);
+//     }
+// }
+// returnCars(cars,'myId');
+
+
 // - приймає масив автомобілів (можна взяти з попередніх дз ),та  індентифікатор елемнту в який потрібно додати список цих автомобілів.
 // Для кожного автомобіля створити свій блок, та додати його в елемент, індентифікатор якого ви отримали.
 // Для кожної властивості створити всередені блока автомоблія свій блок
+
+// cars = [{name: 'Bmw', earsOld: 23, status: 'ok'},
+//     {name: 'Mercedes', earsOld: 23, status: 'ok'},
+//     {name: 'Audi', earsOld: 23},
+//     {name: 'Toyota', earsOld: 23, color: 'red'},
+//     {name: 'Honda', earsOld: 23, color: "dark"}];
+//
+//
+// let divElement = document.createElement('div');
+// divElement.setAttribute('id', 'myId');
+// document.body.appendChild(divElement);
+//
+// function returnCars(cars = [], div = 'string') {
+//
+//     for (let i = 0; i < cars.length; i++) {
+//         let element = document.createElement('div');
+//         element.innerText = cars[i].name;
+//         let elementById = document.getElementById(div);
+//         elementById.appendChild(element);
+//         for (const elementKey in cars[i]) {
+//             if (elementKey != 'name') {
+//
+//                 let elementValue = document.createElement('p')
+//
+//                 elementValue.innerText = `${elementKey} ${cars[i][elementKey]}`;
+//                 element.appendChild(elementValue)
+//             }
+//
+//         }
+//     }
+// }
+//
+// returnCars(cars, 'myId');
+
+
 // // ******************* НАЗАД В МИНУЛЕ *********************** //
 //
 //
@@ -459,10 +547,37 @@ zeroingZeroing([0, 0, 0, 1])
 // Выведите слово YES, если число N является точной степенью двойки,
 // или слово NO в противном случае.
 // Операцией возведения в степень пользоваться нельзя!
+
+
+// function isMathPow(n) {
+//     if (n === 2) {
+//         return 'yes'
+//     }
+//     if (n <= 2) {
+//         return 'no'
+//     }
+//     return isMathPow(n / 2)
+// }
+//
+// for (let i = 0; i < 1000; i++) {
+//     let result = isMathPow(i);
+//     if (result === 'yes') {
+//         console.log(result + ' ' + i);
+//     }
+// }
+
 //
 // 2) Deep Copy
 // реалізувати глибоке копіювання обєкту за допомогою рекурсій
-//
+
+
+let user =  {
+    name
+}
+
+
+
+
 // 3) Flat
 // Вирівняти багаторівневий масив в однорівневий
 // [1,3, ['Hello, 'Wordd', [9,6,1]], ['oops'], 9] -> [1, 3, 'Hello, 'Wordd', 9, 6, 1, 'oops', 9]
