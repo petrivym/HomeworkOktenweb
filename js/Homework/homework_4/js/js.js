@@ -566,19 +566,39 @@
 //     }
 // }
 
-
-
 // 2) Deep Copy
 // реалізувати глибоке копіювання обєкту за допомогою рекурсій
+const object = {
+    a: 'somestring',
+    b: 42,
+    c: false,
+     d : {
+        name :'beep'
+     }
+};
+
+function copyDeepObj(obj){
+    const newDeepObj = {}
+    for (const newDeepObjKey in obj) {
+        if (typeof obj[newDeepObjKey] === 'object'){
+            newDeepObj[newDeepObjKey] = copyDeepObj(obj[newDeepObjKey]);
+            continue;
+        }
+            newDeepObj[newDeepObjKey] = obj[newDeepObjKey]
+    }
+    return newDeepObj
+}
+
+
+let x = copyDeepObj(object)
+x.d.name = 'x';
+
+console.log(x);
+
+console.log(object);
 // 3) Flat
 // Вирівняти багаторівневий масив в однорівневий
 // [1,3, ['Hello, 'Wordd', [9,6,1]], ['oops'], 9] -> [1, 3, 'Hello, 'Wordd', 9, 6, 1, 'oops', 9]
-
-
-
-
-
-
 
 
 
