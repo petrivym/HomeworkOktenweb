@@ -433,14 +433,19 @@
 // let n2 = 'Ron Whisley'
 // let n3 = 'Hermione Granger'
 
-// let n1 = '    Harry       Potter      '
-// let n2 = '    Ron       Whisley      '
-// let n3 = '    Hermione       Granger      '
-// function removeName(string){
-//     let stringWithoutSpaceStartEnd  =  string.trim();
-//     let arrayWithSpace = stringWithoutSpaceStartEnd.split(' ');
-//     return  `${arrayWithSpace[0]} ${arrayWithSpace[arrayWithSpace.length-1]}`
+// let n1 = '    Harry       Potter  Ivanovich     '
+// let n2 = '    Ron       Whisley    Andriyovich   '
+// let n3 = '    Hermione       Granger   Olegivna   '
 //
+// function removeName(string) {
+//     let correctStr = string.trim().split('');
+//     for (let i = 0; i < correctStr.length; i++) {
+//         if (correctStr[i] == ' ' && correctStr[i + 1] == ' ') {
+//             correctStr.splice([i + 1], 1);
+//             i--;
+//         }
+//     }
+//     return correctStr.join('')
 // }
 //
 // console.log(removeName(n1));
@@ -601,24 +606,24 @@
 // Вирівняти багаторівневий масив в однорівневий
 // [1,3, ['Hello, 'Wordd', [9,6,1]], ['oops'], 9] -> [1, 3, 'Hello, 'Wordd', 9, 6, 1, 'oops', 9]
 
-array = [1, 3, ['Hello', 'Wordd', [9, 6, 1]], ['oops'], 9];
-
-function flat(array = []) {
-    let flatArray = [];
-    for (let i = 0; i < array.length; i++) {
-        if (typeof array[i] === "object") {
-            let deepArray = flat(array[i]);
-            for (const deepArrayElement of deepArray) {
-                flatArray.push(deepArrayElement);
-            }
-            continue;
-        }
-        flatArray.push(array[i]);
-    }
-    return flatArray
-}
-
-
-console.log(flat(array));//-> [1, 3, 'Hello, 'Wordd', 9, 6, 1, 'oops', 9]
+// array = [1, 3, ['Hello', 'Wordd', [9, 6, 1]], ['oops'], 9];
+//
+// function flat(array = []) {
+//     let flatArray = [];
+//     for (let i = 0; i < array.length; i++) {
+//         if (typeof array[i] === "object") {
+//             let deepArray = flat(array[i]);
+//             for (const deepArrayElement of deepArray) {
+//                 flatArray.push(deepArrayElement);
+//             }
+//             continue;
+//         }
+//         flatArray.push(array[i]);
+//     }
+//     return flatArray
+// }
+//
+//
+// console.log(flat(array));//-> [1, 3, 'Hello, 'Wordd', 9, 6, 1, 'oops', 9]
 
 
