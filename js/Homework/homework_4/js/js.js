@@ -376,8 +376,6 @@
 // [1,0,6,0,3] => [1,6,3,0,0]
 // [0,1,2,3,4] => [1,2,3,4,0]
 // [0,0,1,0]   => [1,0,0,0]
-
-
 // function zeroingZeroing(array) {
 //     let safeguard = 0;
 //     for (let i = 0; i < array.length; i++) {
@@ -436,7 +434,7 @@
 // let n1 = '    Harry       Potter  Ivanovich     '
 // let n2 = '    Ron       Whisley    Andriyovich   '
 // let n3 = '    Hermione       Granger   Olegivna   '
-//
+
 // function removeName(string) {
 //     let correctStr = string.trim().split('');
 //     for (let i = 0; i < correctStr.length; i++) {
@@ -447,6 +445,17 @@
 //     }
 //     return correctStr.join('')
 // }
+// const  trimming =  (str) => {
+//     const  arr = [];
+//     for (const item of str.split(' ')) {
+//         if (item) {
+//             arr.push(item)
+//         }
+//     }
+// return arr.join(' ');
+// }
+//
+// trimming(n1);
 //
 // console.log(removeName(n1));
 // console.log(removeName(n2));
@@ -613,17 +622,36 @@
 //     for (let i = 0; i < array.length; i++) {
 //         if (typeof array[i] === "object") {
 //             let deepArray = flat(array[i]);
+//
 //             for (const deepArrayElement of deepArray) {
 //                 flatArray.push(deepArrayElement);
 //             }
+//
 //             continue;
 //         }
 //         flatArray.push(array[i]);
 //     }
 //     return flatArray
 // }
+
+
+// array = [1, 3, ['Hello', 'Wordd', [9, 6, 1]], ['oops'], 9];
+
+function flat(arr) {
+
+    const newArray = [];
+    for (const arrItem of arr) {
+        if (typeof arrItem === 'object') {
+            newArray.push(...flat(arrItem))
+        } else {
+            newArray.push(arrItem)
+        }
+    }
+    return newArray;
+}
+console.log(flat(array));
 //
 //
-// console.log(flat(array));//-> [1, 3, 'Hello, 'Wordd', 9, 6, 1, 'oops', 9]
+console.log(flat(array));//-> [1, 3, 'Hello, 'Wordd', 9, 6, 1, 'oops', 9]
 
 
