@@ -659,23 +659,23 @@
 // }
 
 
-// array = [1, 3, ['Hello', 'Wordd', [9, 6, 1]], ['oops'], 9];
+array = [1, 3, ['Hello', 'Wordd', [9, 6, 1]], ['oops'], 9];
 
-// function flat(arr) {
+function flat(arr) {
+
+    const newArray = [];
+    for (const arrItem of arr) {
+        if (typeof arrItem === 'object') {
+            newArray.push(...flat(arrItem))
+        } else {
+            newArray.push(arrItem)
+        }
+    }
+    return newArray;
+}
+console.log(flat(array));
 //
-//     const newArray = [];
-//     for (const arrItem of arr) {
-//         if (typeof arrItem === 'object') {
-//             newArray.push(...flat(arrItem))
-//         } else {
-//             newArray.push(arrItem)
-//         }
-//     }
-//     return newArray;
-// }
-// console.log(flat(array));
-// //
-// //
-// console.log(flat(array));//-> [1, 3, 'Hello, 'Wordd', 9, 6, 1, 'oops', 9]
+//
+console.log(flat(array));//-> [1, 3, 'Hello, 'Wordd', 9, 6, 1, 'oops', 9]
 
 

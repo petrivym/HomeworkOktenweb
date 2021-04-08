@@ -494,7 +494,6 @@
 //
 // }
 //
-
 // class ConstructorArtibutes{
 //     constructor(nameArtibutes, descriptionArtibutes) {
 //      this.nameArtibutes = nameArtibutes;
