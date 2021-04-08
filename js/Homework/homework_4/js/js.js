@@ -435,6 +435,24 @@
 // let n2 = '    Ron       Whisley    Andriyovich   '
 // let n3 = '    Hermione       Granger   Olegivna   '
 
+
+
+
+// function magicForString(invalidName) {
+//     let name = invalidName.trim();
+//
+//     const firstSpace = name.indexOf(' ');
+//     const lastSpace = name.lastIndexOf(' ');
+//
+//     const spaces = name.slice(firstSpace, lastSpace + 1);
+//
+//     name = name.replace(spaces, ' ');
+//
+//     return name;
+// }
+
+// console.log(magicForString(n1));
+
 // function removeName(string) {
 //     let correctStr = string.trim().split('');
 //     for (let i = 0; i < correctStr.length; i++) {
@@ -445,17 +463,23 @@
 //     }
 //     return correctStr.join('')
 // }
-// const  trimming =  (str) => {
-//     const  arr = [];
-//     for (const item of str.split(' ')) {
-//         if (item) {
-//             arr.push(item)
+
+
+// const  trimming =  (arr) => {
+//     let newArray = [];
+//     for (const arrItem of arr.split(' ')) {
+//         if (arrItem){
+//             newArray.push(arrItem);
 //         }
 //     }
-// return arr.join(' ');
+//     return newArray.join(" ");
 // }
+
+
+
+
 //
-// trimming(n1);
+// console.log(trimming(n1));
 //
 // console.log(removeName(n1));
 // console.log(removeName(n2));
@@ -637,21 +661,21 @@
 
 // array = [1, 3, ['Hello', 'Wordd', [9, 6, 1]], ['oops'], 9];
 
-function flat(arr) {
-
-    const newArray = [];
-    for (const arrItem of arr) {
-        if (typeof arrItem === 'object') {
-            newArray.push(...flat(arrItem))
-        } else {
-            newArray.push(arrItem)
-        }
-    }
-    return newArray;
-}
-console.log(flat(array));
+// function flat(arr) {
 //
-//
-console.log(flat(array));//-> [1, 3, 'Hello, 'Wordd', 9, 6, 1, 'oops', 9]
+//     const newArray = [];
+//     for (const arrItem of arr) {
+//         if (typeof arrItem === 'object') {
+//             newArray.push(...flat(arrItem))
+//         } else {
+//             newArray.push(arrItem)
+//         }
+//     }
+//     return newArray;
+// }
+// console.log(flat(array));
+// //
+// //
+// console.log(flat(array));//-> [1, 3, 'Hello, 'Wordd', 9, 6, 1, 'oops', 9]
 
 

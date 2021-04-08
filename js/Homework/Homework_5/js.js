@@ -376,10 +376,174 @@
 // prince.FinedSize(arrayPrincess)
 //
 
+//
+// Додатково
+// ______________________________________________________________________________________________________________________________________________________
+//
+// -  Створити функцію конструктор для об'єкту який описує теги
+// Властивості
+// -назва тегу
+// - опис його дій
+// - масив з атрибутами (2-3 атрибути максимум)
+// Кожен атрибут описати як окремий який буде містити
+// -назву атрибуту
+// -опис дії атрибуту
+// інформацію брати з htmlbook.ru
+// Таким чином описати теги
+// -a
+// -div
+// -h1
+// -span
+// -input
+// -form
+// -option
+// -select
+// Приклад результату
+// {
+//     titleOfTag: 'area',
+//         action: `Каждый элемент <area> определяет активные области изображения, которые являются ссылками...`,
+//     attrs: [
+//     {titleOfAttr: 'accesskey', actionOfAttr: 'Переход к области с помощью комбинации клавиш'},
+//     {/*some props and values*/},
+//     {/*...*/},
+//     {/*...*/},
+// ]
+//
+// }
 
 
+// function ConstructorArtibutes(nameArtibutes, descriptionArtibutes) {
+//     this.name = nameArtibutes;
+//     this.descriptionArtibutes = descriptionArtibutes;
+// }
+//
+// function ConstructObj(name, description, artibutes) {
+//     this.name = name;
+//     this.description = description;
+//     this.artibutes = artibutes;
+// }
 
 
+// let aAtr1 = new ConstructorArtibutes('accesskey', 'Активация ссылки с помощью комбинации клавиш.');
+// let aAtr2 = new ConstructorArtibutes('href', 'Задает адрес документа, на который следует перейти.');
+// let divAtr1 = new ConstructorArtibutes('align', 'Задает выравнивание содержимого тега <div>.');
+// let divAtr2 = new ConstructorArtibutes('title', 'Определяет выравнивание заголовка.');
+// let h1Atr1 = new ConstructorArtibutes('align', 'Задает адрес документа, на который следует перейти.');
+// let h1Atr2 = new ConstructorArtibutes('Также для этого тега доступны универсальные атрибуты и события.', 'Также для этого тега доступны универсальные атрибуты и события.');
+// let spanAtr1 = new ConstructorArtibutes('Для этого тега доступны универсальные атрибуты и события.', 'Для этого тега доступны универсальные атрибуты и события.');
+// let spanAtr2 = new ConstructorArtibutes('Для этого тега доступны универсальные атрибуты и события.', 'Для этого тега доступны универсальные атрибуты и события.');
+// let inputAtr1 = new ConstructorArtibutes('accept', 'Устанавливает фильтр на типы файлов, которые вы можете отправить через поле загрузки файлов.');
+// let inputAtr2 = new ConstructorArtibutes('form', 'Связывает поле с формой по её идентификатору.');
+// let formAtr1 = new ConstructorArtibutes('action', 'Адрес программы или документа, который обрабатывает данные формы.\n');
+// let formAtr2 = new ConstructorArtibutes('enctype', 'Способ кодирования данных формы.');
+// let optionAtr1 = new ConstructorArtibutes('disabled', 'Заблокировать для доступа элемент списка.\n');
+// let optionAtr2 = new ConstructorArtibutes('label', 'Указание метки пункта списка.\n');
+// let selectAtr1 = new ConstructorArtibutes('accesskey', 'Позволяет перейти к списку с помощью некоторого сочетания клавиш.\n');
+// let selectAtr2 = new ConstructorArtibutes('autofocus', 'Устанавливает, что список получает фокус после загрузки страницы.\n');
+//
+// let aAtr1Array = [aAtr1, aAtr2];
+//
+// let a = new ConstructObj('a', 'Тег <a> является одним из важных элементов HTML и предназначен для создания ссылок.', aAtr1Array);
+// let div = new ConstructObj('div', 'Элемент <div> является блочным элементом и предназначен для выделения фрагмента документа с целью изменения вида содержимого', [divAtr1, divAtr2]);
+// let h1 = new ConstructObj('h1', 'Элемент h1', [h1Atr1, h1Atr2]);
+// let span = new ConstructObj('span', 'Элемент span', [spanAtr1, spanAtr2]);
+// let input = new ConstructObj('input', 'Элемент input', [inputAtr1, inputAtr2]);
+// let form = new ConstructObj('form', 'Элемент form', [formAtr1, formAtr2]);
+// let option = new ConstructObj('option', 'Элемент option', [optionAtr1, optionAtr2]);
+// let select = new ConstructObj('select', 'Элемент select', [selectAtr1, selectAtr2]);
+//
+// console.log(a);
+// console.log(div);
+// console.log(h1);
+// console.log(span);
+// console.log(input);
+// console.log(form);
+// console.log(option);
+// console.log(select);
 
 
+// -  Створити класс  для об'єкту який описує теги
+// Властивості
+// -назва тегу
+// - опис його дій
+// - масив з атрибутами (2-3 атрибути максимум)
+// Кожен атрибут описати як окремий який буде містити
+// -назву атрибуту
+// -опис дії атрибуту
+// інформацію брати з htmlbook.ru
+//
+// Таким чином описати теги
+// -a
+// -div
+// -h1
+// -span
+// -input
+// -form
+// -option
+// -select
+// Приклад результату
+// {
+//     titleOfTag: 'area',
+//         action: `Каждый элемент <area> определяет активные области изображения, которые являются ссылками...`,
+//     attrs: [
+//     {titleOfAttr: 'accesskey', actionOfAttr: 'Переход к области с помощью комбинации клавиш'},
+//     {/*some props and values*/},
+//     {/*...*/},
+//     {/*...*/},
+// ]
+//
+// }
+//
 
+// class ConstructorArtibutes{
+//     constructor(nameArtibutes, descriptionArtibutes) {
+//      this.nameArtibutes = nameArtibutes;
+//      this.descriptionArtibutes = descriptionArtibutes;
+//     }
+// }
+//
+//
+// class ConstructObj {
+//     constructor(name, description, artibutes) {
+//         this.name = name;
+//         this.description = description;
+//         this.artibutes = artibutes;
+//     }
+// }
+//
+// let aAtr1 = new ConstructorArtibutes('accesskey', 'Активация ссылки с помощью комбинации клавиш.');
+// let aAtr2 = new ConstructorArtibutes('href', 'Задает адрес документа, на который следует перейти.');
+// let divAtr1 = new ConstructorArtibutes('align', 'Задает выравнивание содержимого тега <div>.');
+// let divAtr2 = new ConstructorArtibutes('title', 'Определяет выравнивание заголовка.');
+// let h1Atr1 = new ConstructorArtibutes('align', 'Задает адрес документа, на который следует перейти.');
+// let h1Atr2 = new ConstructorArtibutes('Также для этого тега доступны универсальные атрибуты и события.', 'Также для этого тега доступны универсальные атрибуты и события.');
+// let spanAtr1 = new ConstructorArtibutes('Для этого тега доступны универсальные атрибуты и события.', 'Для этого тега доступны универсальные атрибуты и события.');
+// let spanAtr2 = new ConstructorArtibutes('Для этого тега доступны универсальные атрибуты и события.', 'Для этого тега доступны универсальные атрибуты и события.');
+// let inputAtr1 = new ConstructorArtibutes('accept', 'Устанавливает фильтр на типы файлов, которые вы можете отправить через поле загрузки файлов.');
+// let inputAtr2 = new ConstructorArtibutes('form', 'Связывает поле с формой по её идентификатору.');
+// let formAtr1 = new ConstructorArtibutes('action', 'Адрес программы или документа, который обрабатывает данные формы.\n');
+// let formAtr2 = new ConstructorArtibutes('enctype', 'Способ кодирования данных формы.');
+// let optionAtr1 = new ConstructorArtibutes('disabled', 'Заблокировать для доступа элемент списка.\n');
+// let optionAtr2 = new ConstructorArtibutes('label', 'Указание метки пункта списка.\n');
+// let selectAtr1 = new ConstructorArtibutes('accesskey', 'Позволяет перейти к списку с помощью некоторого сочетания клавиш.\n');
+// let selectAtr2 = new ConstructorArtibutes('autofocus', 'Устанавливает, что список получает фокус после загрузки страницы.\n');
+//
+// let aAtr1Array = [aAtr1, aAtr2];
+//
+// let a = new ConstructObj('a', 'Тег <a> является одним из важных элементов HTML и предназначен для создания ссылок.', aAtr1Array);
+// let div = new ConstructObj('div', 'Элемент <div> является блочным элементом и предназначен для выделения фрагмента документа с целью изменения вида содержимого', [divAtr1, divAtr2]);
+// let h1 = new ConstructObj('h1', 'Элемент h1', [h1Atr1, h1Atr2]);
+// let span = new ConstructObj('span', 'Элемент span', [spanAtr1, spanAtr2]);
+// let input = new ConstructObj('input', 'Элемент input', [inputAtr1, inputAtr2]);
+// let form = new ConstructObj('form', 'Элемент form', [formAtr1, formAtr2]);
+// let option = new ConstructObj('option', 'Элемент option', [optionAtr1, optionAtr2]);
+// let select = new ConstructObj('select', 'Элемент select', [selectAtr1, selectAtr2]);
+//
+// console.log(a);
+// console.log(div);
+// console.log(h1);
+// console.log(span);
+// console.log(input);
+// console.log(form);
+// console.log(option);
+// console.log(select);
