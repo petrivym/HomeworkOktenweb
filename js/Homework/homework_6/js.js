@@ -82,19 +82,19 @@
 
 // 3) Все робити тільки за допомогою методів масивів!
 //     Дано масив :
-const users = [
-    {name: 'vasya', age: 31, isMarried: false},
-    {name: 'petya', age: 30, isMarried: true},
-    {name: 'kolya', age: 29, isMarried: true},
-    {name: 'olya', age: 28, isMarried: false},
-    {name: 'max', age: 30, isMarried: true},
-    {name: 'anya', age: 31, isMarried: false},
-    {name: 'oleg', age: 28, isMarried: false},
-    {name: 'andrey', age: 29, isMarried: true},
-    {name: 'masha', age: 30, isMarried: true},
-    {name: 'olya', age: 31, isMarried: false},
-    {name: 'max', age: 31, isMarried: true}
-];
+// const users = [
+//     {name: 'vasya', age: 31, isMarried: false},
+//     {name: 'petya', age: 30, isMarried: true},
+//     {name: 'kolya', age: 29, isMarried: true},
+//     {name: 'olya', age: 28, isMarried: false},
+//     {name: 'max', age: 30, isMarried: true},
+//     {name: 'anya', age: 31, isMarried: false},
+//     {name: 'oleg', age: 28, isMarried: false},
+//     {name: 'andrey', age: 29, isMarried: true},
+//     {name: 'masha', age: 30, isMarried: true},
+//     {name: 'olya', age: 31, isMarried: false},
+//     {name: 'max', age: 31, isMarried: true}
+// ];
 // a) відсортувати його за  віком (зростання , а потім окремо спадання)
 // users.sort((a ,b) =>a.age  - b.age);
 // console.log(users);
@@ -211,19 +211,19 @@ const users = [
 // console.log(filterVolumeProducer);
 //
 // - взять слдующий массив
-const usersWithAddress = [
-    {id: 9, name: 'vasya', age: 31, isMarried: false, address: {city: 'Kyiv', street: 'Gongadze', number: 16}},
-    {id: 2, name: 'petya', age: 30, isMarried: true, address: {city: 'Rivne', street: 'Zelena', number: 1}},
-    {id: 4, name: 'olya', age: 29, isMarried: true, address: {city: 'Lviv', street: 'Pasichna', number: 121}},
-    {id: 3, name: 'kolya', age: 28, isMarried: false, address: {city: 'Rivne', street: 'Shevchenko', number: 90}},
-    {id: 8, name: 'max', age: 30, isMarried: true, address: {city: 'Lviv', street: 'Kriva Lipa', number: 115}},
-    {id: 6, name: 'anya', age: 31, isMarried: false, address: {city: 'Lviv', street: 'Shevchenko', number: 2}},
-    {id: 10, name: 'oleg', age: 28, isMarried: false, address: {city: 'Kyiv', street: 'Centralna', number: 22}},
-    {id: 5, name: 'andrey', age: 29, isMarried: true, address: {city: 'Lviv', street: 'Gorodotska', number: 43}},
-    {id: 1, name: 'masha', age: 30, isMarried: true, address: {city: 'Kyiv', street: 'Peremogi', number: 12}},
-    {id: 7, name: 'olya', age: 31, isMarried: false, address: {city: 'Lviv', street: 'Naukova', number: 16}},
-    {id: 11, name: 'max', age: 31, isMarried: true, address: {city: 'Rivne', street: 'Ivana Franka', number: 121}}
-];
+// const usersWithAddress = [
+//     {id: 9, name: 'vasya', age: 31, isMarried: false, address: {city: 'Kyiv', street: 'Gongadze', number: 16}},
+//     {id: 2, name: 'petya', age: 30, isMarried: true, address: {city: 'Rivne', street: 'Zelena', number: 1}},
+//     {id: 4, name: 'olya', age: 29, isMarried: true, address: {city: 'Lviv', street: 'Pasichna', number: 121}},
+//     {id: 3, name: 'kolya', age: 28, isMarried: false, address: {city: 'Rivne', street: 'Shevchenko', number: 90}},
+//     {id: 8, name: 'max', age: 30, isMarried: true, address: {city: 'Lviv', street: 'Kriva Lipa', number: 115}},
+//     {id: 6, name: 'anya', age: 31, isMarried: false, address: {city: 'Lviv', street: 'Shevchenko', number: 2}},
+//     {id: 10, name: 'oleg', age: 28, isMarried: false, address: {city: 'Kyiv', street: 'Centralna', number: 22}},
+//     {id: 5, name: 'andrey', age: 29, isMarried: true, address: {city: 'Lviv', street: 'Gorodotska', number: 43}},
+//     {id: 1, name: 'masha', age: 30, isMarried: true, address: {city: 'Kyiv', street: 'Peremogi', number: 12}},
+//     {id: 7, name: 'olya', age: 31, isMarried: false, address: {city: 'Lviv', street: 'Naukova', number: 16}},
+//     {id: 11, name: 'max', age: 31, isMarried: true, address: {city: 'Rivne', street: 'Ivana Franka', number: 121}}
+// ];
 
 //
 // -- Відсортувати їх по ID
@@ -311,9 +311,9 @@ const usersWithAddress = [
 //     {id: 11, name: 'max', age: 31, isMarried: true, address: {city: 'Rivne', street: 'Ivana Franka', number: 121}}
 // ];
 
-const userClone = users.reduce((acc, value) =>  value.isMarried ? [...acc,{...value,hasHouse : true}] :  acc, [])
-
-console.log(userClone);
+// const userClone = users.reduce((acc, value) =>  value.isMarried ? [...acc,{...value,hasHouse : true}] :  acc, [])
+//
+// console.log(userClone);
 
 //
 //
@@ -325,16 +325,74 @@ console.log(userClone);
 //     Марка автомобля, потужність двигуна, власник, ціна, рік випуску.
 //     Власник автомобіля теж має бути обєкт, у якого є поля
 // Імя, вік, стаж водіння.
+// class car {
+//     constructor(producer, power, price, year, driver) {
+//         this.producer = producer;
+//         this.power = power;
+//         this.driver = driver;
+//         this.price = price;
+//         this.year = year;
+//         this.driver = driver;
+//     }
+// }
+//
+// let subaruCar = new car('subaru', 400, 7000, 2013, {name: 'alex', age: 23, drivingeExperience: 3});
+// let mercedesCar = new car('mercedes', 350, 9000, 2008, {name: 'oleg', age: 33, drivingeExperience: 10});
+// let bmwCar = new car('bmw', 300, 9000, 2015, {name: 'ivan', age: 20, drivingeExperience: 2});
+// let audiCar = new car('audi', 290, 9600, 2014, {name: 'Stepan', age: 28, drivingeExperience: 5});
+// let bentleyCar = new car('bentle', 250, 17000, 2018, {name: 'yosup', age: 44, drivingeExperience: 7});
+// let fiatCar = new car('fiat', 150, 8607, 2015, {name: 'Volodia', age: 38, drivingeExperience: 8});
+// let nissaCar = new car('nissa', 450, 35000, 2020, {name: 'Ivanovich', age: 56, drivingeExperience: 20});
+// let volkswagenCar = new car('volkswagen', 380, 10000, 2017, {name: 'Andriy', age: 19, drivingeExperience: 1});
+// let volvoCar = new car('volvo', 220, 37000, 2020, {name: 'Petro', age: 54, drivingeExperience: 23});
+// let mazdaCar = new car('mazda', 600, 27000, 2021, {name: 'Muron', age: 62, drivingeExperience: 36});
+//
+// let arrayCars = [subaruCar, mercedesCar, bmwCar, audiCar, bentleyCar, fiatCar, nissaCar, volkswagenCar, volvoCar, mazdaCar];
+//
+// console.log(arrayCars);
+
 //     Створити не менше 7 та не більше 20 машинок.
 //     Зробили половину автопарку ремонт мотору, що збільшить потужність автомобілів на 10% (переприсвоєння змінної потужності).
 // На відремонтовані автомобілі найняти нових водіїв (переприсвоїти змінну водій).
 // Для початку вкладіть всі наші створені автомобілі в масив cars.
 //     Далі необхідно рати кожну другу машинку (цикл з кроком в 2), та робити їй підвищення потужності двигуна на 10% та ціну на 5%
+// let upPowerArray = arrayCars.map(function (value, i) {
+//     if(i%2){
+//         value.power +=value.power* 0.1;
+//         value.price +=value.price* 0.05;
+//     }
+//     return value
+// });
+//
+//
+// console.log(upPowerArray);
 // Після того зробити перевірку досвіду ВСІХ наших водіїв. Якщо досвід водія менший за 5 років, але його вік більший за 25,
+
+// let filterExperienceDrivers = arrayCars.filter((value => value.driver.drivingeExperience < 5 && value.driver.age < 25 ));
+// console.log(filterExperienceDrivers);
 //     то необідно відправити його на курси підвищення кваліфікації, що збільшить йому досвід на 1 рік.
-//     Також спробуйте порахувати суму, яку потрібно потратити для покупки всіх цих авто в циклі
+
+
+// let upExperience = filterExperienceDrivers.reduce((acum, elem) => {
+//     elem.driver.drivingeExperience += 1;
+//     acum.push(elem);
+//     return acum;
+// },[]);
+
+
+// let upExperience = filterExperienceDrivers.map((elem => {
+//     elem.driver.drivingeExperience += 1;
+//     return elem
+// }));
 //
 //
+// console.log(upExperience);
+//     Також спробуйте порахувати суму, яку потрібно потратити для покупки всіх цих авто в цикл//
+// let sumAllCars = arrayCars.reduce((acc,elem)=> acc+= elem.price ,0);
+//
+// console.log(sumAllCars *28);
+
+
 // Задача: дан отсортированный по возрастанию массив целых чисел.
 //     Необходимо вернуть наименьший и наибольший индекс заданного элемента.
 //     Входные данные: arr — массив целых чисел значения которых по модулю не больше 10. Размер массива не более 10 элементов.
@@ -346,3 +404,71 @@ console.log(userClone);
 // Answer: MinIndex = 0, MaxIndex = 0.
 // 2. Key = 4
 // Answer: MinIndex = 3, MaxIndex = 6.
+
+// Arr = [1, 2, 3, 4, 4, 4, 4, 7, 7, 9, 14]
+
+
+// function findStatAndEnd(array, key) {
+//     console.log(`Answer: MinIndex = ${array.indexOf(key)}, MaxIndex = ${array.lastIndexOf(key)}.`);
+// }
+
+// findStatAndEnd(Arr,1);
+// findStatAndEnd(Arr,4);
+// findStatAndEnd(Arr,22);
+
+
+// function findStatAndEnd(array, key) {
+//     let minIndex = null;
+//     let maxIndex = null;
+//     for (let i = 0; i < array.length; i++) {
+//         if (!minIndex) {
+//             if (array[i] === key) {
+//                 minIndex = i +'';
+//             }
+//         }
+//     }
+//     for (let i = array.length - 1; i >= 0; i--) {
+//         if (!maxIndex) {
+//             if (array[i] === key) {
+//                 maxIndex = i + '';
+//             }
+//         }
+//     }
+//     if(!minIndex){
+//         minIndex = -1;
+//     }
+//     if(!maxIndex){
+//         maxIndex = -1;
+//     }
+//
+//     console.log(`Answer: MinIndex = ${minIndex}, MaxIndex = ${maxIndex}`);
+// }
+//
+// findStatAndEnd(Arr, 1);
+// findStatAndEnd(Arr, 4);
+// findStatAndEnd(Arr, 22);
+
+
+// function findStatAndEnd(array, key) {
+//     let minIndex = null;
+//     let maxIndex = 0;
+//     for (let i = 0; i < array.length; i++) {
+//         if (array[i] === key) {
+//             if(!minIndex){
+//                 minIndex = i;
+//             }
+//             maxIndex = i;
+//
+//         }
+//     }
+//     return `Answer: MinIndex = ${minIndex}, MaxIndex = ${maxIndex}`
+// }
+//
+// console.log();
+//
+//
+//
+//
+// console.log(findStatAndEnd(Arr, 1));
+// console.log(findStatAndEnd(Arr, 4));
+// console.log(findStatAndEnd(Arr, 22));
