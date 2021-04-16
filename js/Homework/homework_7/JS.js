@@ -798,19 +798,19 @@
 
 
 // -- Взяти масив юзерів
-// const usersWithAddress = [
-//     {id: 9, name: 'vasya', age: 31, isMarried: false, address: {city: 'Kyiv', street: 'Gongadze', number: 16}},
-//     {id: 2, name: 'petya', age: 30, isMarried: true, address: {city: 'Rivne', street: 'Zelena', number: 1}},
-//     {id: 4, name: 'kolya', age: 29, isMarried: true, address: {city: 'Lviv', street: 'Pasichna', number: 121}},
-//     {id: 3, name: 'olya', age: 28, isMarried: false, address: {city: 'Rivne', street: 'Shevchenko', number: 90}},
-//     {id: 8, name: 'max', age: 30, isMarried: true, address: {city: 'Lviv', street: 'Kriva Lipa', number: 115}},
-//     {id: 6, name: 'anya', age: 31, isMarried: false, address: {city: 'Lviv', street: 'Shevchenko', number: 2}},
-//     {id: 10, name: 'oleg', age: 28, isMarried: false, address: {city: 'Kyiv', street: 'Centralna', number: 22}},
-//     {id: 5, name: 'andrey', age: 29, isMarried: true, address: {city: 'Lviv', street: 'Gorodotska', number: 43}},
-//     {id: 1, name: 'masha', age: 30, isMarried: true, address: {city: 'Kyiv', street: 'Peremogi', number: 12}},
-//     {id: 7, name: 'olya', age: 31, isMarried: false, address: {city: 'Lviv', street: 'Naukova', number: 16}},
-//     {id: 11, name: 'max', age: 31, isMarried: true, address: {city: 'Rivne', street: 'Ivana Franka', number: 121}}
-// ];
+const usersWithAddress = [
+    {id: 9, name: 'vasya', age: 31, isMarried: false, address: {city: 'Kyiv', street: 'Gongadze', number: 16}},
+    {id: 2, name: 'petya', age: 30, isMarried: true, address: {city: 'Rivne', street: 'Zelena', number: 1}},
+    {id: 4, name: 'kolya', age: 29, isMarried: true, address: {city: 'Lviv', street: 'Pasichna', number: 121}},
+    {id: 3, name: 'olya', age: 28, isMarried: false, address: {city: 'Rivne', street: 'Shevchenko', number: 90}},
+    {id: 8, name: 'max', age: 30, isMarried: true, address: {city: 'Lviv', street: 'Kriva Lipa', number: 115}},
+    {id: 6, name: 'anya', age: 31, isMarried: false, address: {city: 'Lviv', street: 'Shevchenko', number: 2}},
+    {id: 10, name: 'oleg', age: 28, isMarried: false, address: {city: 'Kyiv', street: 'Centralna', number: 22}},
+    {id: 5, name: 'andrey', age: 29, isMarried: true, address: {city: 'Lviv', street: 'Gorodotska', number: 43}},
+    {id: 1, name: 'masha', age: 30, isMarried: true, address: {city: 'Kyiv', street: 'Peremogi', number: 12}},
+    {id: 7, name: 'olya', age: 31, isMarried: false, address: {city: 'Lviv', street: 'Naukova', number: 16}},
+    {id: 11, name: 'max', age: 31, isMarried: true, address: {city: 'Rivne', street: 'Ivana Franka', number: 121}}
+];
 // Створити три чекбокси. Кожний з них активує фільтр для вищевказаного масиву. Фільтри можуть працювати як разом так і окремо.
 // 1й - відфільтровує юзерів зі статусом false (залишає зі статусом false)
 // 2й - залишає старших 29 років включно
@@ -820,90 +820,90 @@
 
 // -Creat all Elements
 
-// let containerInput = document.createElement('div');
-//
-// let inputStatus = document.createElement('input');
-// let inputOld = document.createElement('input');
-// let inputCity = document.createElement('input');
-//
-// let inputStatusText = document.createElement('p');
-// let inputOldText = document.createElement('p');
-// let inputCityText = document.createElement('p');
-//
-//
-// let Result = document.createElement('div');
-//
-//
-// // Add attributes
-// containerInput.classList.add('containerInput')
-// inputStatusText.innerText = 'відфільтровує юзерів зі статусом false (залишає зі статусом false)';
-// inputOldText.innerText = 'залишає старших 29 років включно';
-// inputCityText.innerText = 'залишає тих в кого місто Київ';
-//
-// inputStatus.type = 'checkbox';
-// inputOld.type = 'checkbox';
-// inputCity.type = 'checkbox';
-//
-// inputStatus.value = '1';
-// inputOld.value = '2';
-// inputCity.value = '3';
-//
-//
-// //appendChild Elements
-// document.body.appendChild(containerInput);
-// containerInput.appendChild(inputStatus);
-// containerInput.appendChild(inputStatusText);
-// containerInput.appendChild(inputOld);
-// containerInput.appendChild(inputOldText);
-// containerInput.appendChild(inputCity);
-// containerInput.appendChild(inputCityText);
-// document.body.appendChild(Result)
-//
-//
-// // Creat events  and show results Array.
-// // /Калхозний варіант
-//
-//
-// let allInput = document.querySelectorAll('input');
-//
-// let result = usersWithAddress.flat(2);
-// for (const allInputElement of allInput) {
-//     allInputElement.onclick = () => {
-//         switch (allInputElement.value) {
-//             case '1':
-//                 result = result.filter((el) => !(el.isMarried));
-//                 break;
-//             case '2':
-//                 result = result.filter((el) => el.age > 29);
-//                 break;
-//             case '3':
-//                 result = result.filter(function (el) {
-//                     let {city} = el.address
-//                     if (city === 'Kyiv') {
-//                         return true;
-//                     } else {
-//                         return false;
-//                     }
-//                 });
-//                 break;
-//         }
-//         let flag = document.getElementById('display')
-//         if (flag) {
-//             flag.remove();
-//         }
-//         let display = document.createElement('div');
-//               display.setAttribute('id', 'display');
-//         document.body.appendChild(display);
-//
-//         for (const item of result) {
-//             let divFilter = document.createElement('div');
-//             let {id, name, age, isMarried, address: {city}} = item;
-//             divFilter.innerHTML = `id:${id},name:${name},age:${age},isMarried:${isMarried},city:${city},`
-//             console.log(item);
-//             display.appendChild(divFilter);
-//         }
-//     }
-// }
+let conteinerInput = document.createElement('div');
+
+let inputStatus = document.createElement('input');
+let inputOld = document.createElement('input');
+let inputCity = document.createElement('input');
+
+let inputStatusText = document.createElement('p');
+let inputOldText = document.createElement('p');
+let inputCityText = document.createElement('p');
+
+
+let Result = document.createElement('div');
+
+
+// Add attributes
+conteinerInput.classList.add('conteinerInput')
+inputStatusText.innerText = 'відфільтровує юзерів зі статусом false (залишає зі статусом false)';
+inputOldText.innerText = 'залишає старших 29 років включно';
+inputCityText.innerText = 'залишає тих в кого місто Київ';
+
+inputStatus.type = 'checkbox';
+inputOld.type = 'checkbox';
+inputCity.type = 'checkbox';
+
+inputStatus.value = '1';
+inputOld.value = '2';
+inputCity.value = '3';
+
+
+//appendChild Elements
+document.body.appendChild(conteinerInput);
+conteinerInput.appendChild(inputStatus);
+conteinerInput.appendChild(inputStatusText);
+conteinerInput.appendChild(inputOld);
+conteinerInput.appendChild(inputOldText);
+conteinerInput.appendChild(inputCity);
+conteinerInput.appendChild(inputCityText);
+document.body.appendChild(Result)
+
+
+// Creat events  and show results Array.
+// /Калхозний варіант
+
+
+let allInput = document.querySelectorAll('input');
+
+let result = usersWithAddress.flat(2);
+for (const allInputElement of allInput) {
+    allInputElement.onclick = () => {
+        switch (allInputElement.value) {
+            case '1':
+                result = result.filter((el) => !(el.isMarried));
+                break;
+            case '2':
+                result = result.filter((el) => el.age > 29);
+                break;
+            case '3':
+                result = result.filter(function (el) {
+                    let {city} = el.address
+                    if (city === 'Kyiv') {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                });
+                break;
+        }
+        let flag = document.getElementById('display')
+        if (flag) {
+            flag.remove();
+        }
+        let display = document.createElement('div');
+              display.setAttribute('id', 'display');
+        document.body.appendChild(display);
+
+        for (const item of result) {
+            let divFilter = document.createElement('div');
+            let {id, name, age, isMarried, address: {city}} = item;
+            divFilter.innerHTML = `id:${id},name:${name},age:${age},isMarried:${isMarried},city:${city},`
+            console.log(item);
+            display.appendChild(divFilter);
+        }
+    }
+}
 
 
 
