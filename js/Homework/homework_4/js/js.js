@@ -436,8 +436,6 @@
 // let n3 = '    Hermione       Granger   Olegivna   '
 
 
-
-
 // function magicForString(invalidName) {
 //     let name = invalidName.trim();
 //
@@ -474,8 +472,6 @@
 //     }
 //     return newArray.join(" ");
 // }
-
-
 
 
 //
@@ -659,23 +655,34 @@
 // }
 
 
-array = [1, 3, ['Hello', 'Wordd', [9, 6, 1]], ['oops'], 9];
-
-function flat(arr) {
-
-    const newArray = [];
-    for (const arrItem of arr) {
-        if (typeof arrItem === 'object') {
-            newArray.push(...flat(arrItem))
-        } else {
-            newArray.push(arrItem)
-        }
-    }
-    return newArray;
-}
-console.log(flat(array));
+// array = [1, 3, ['Hello', 'Wordd', [9, 6, 1]], ['oops'], 9];
 //
+// function flat(arr) {
 //
-console.log(flat(array));//-> [1, 3, 'Hello, 'Wordd', 9, 6, 1, 'oops', 9]
+//     const newArray = [];
+//     for (const arrItem of arr) {
+//         if (typeof arrItem === 'object') {
+//             newArray.push(...flat(arrItem))
+//         } else {
+//             newArray.push(arrItem)
+//         }
+//     }
+//     return newArray;
+// }
+// console.log(flat(array));
+// //
+// //
+// console.log(flat(array));//-> [1, 3, 'Hello, 'Wordd', 9, 6, 1, 'oops', 9]
+
+
+
+
+
+
+
+
+
+
+
 
 

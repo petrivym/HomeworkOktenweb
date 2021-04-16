@@ -111,17 +111,11 @@
 //     Рекурсія)
 
 
-
-
-
-
-
 // Палиндром
 // Дано слово, состоящее только из строчных латинских букв. Проверьте, является ли это слово палиндромом. Выведите YES или NO.
 //     При решении этой задачи нельзя пользоваться циклами, в решениях на питоне нельзя использовать срезы с шагом, отличным от 1.
 //
 // _______________________________________________________________
-
 
 
 //Розвязок з циклом просто для себе (Простий поліндром)
@@ -168,7 +162,6 @@
 // console.log(countNamber('2176491947586100','1'));
 
 
-
 // Вирівняти багаторівневий масив в однорівневий
 //     [1,3, ['Hello, 'Wordd', [9,6,1]], ['oops'], 9] -> [1, 3, 'Hello, 'Wordd', 9, 6, 1, 'oops', 9]
 // flat використовувати заборонено.
@@ -200,3 +193,189 @@
 //
 //
 //
+
+
+// //  реалізувати глибоке копіювання обєкту за допомогою рекурсій
+// // const object = {
+// //     a: 'somestring',
+// //     b: 42,
+// //     c: false,
+// //     d: {
+// //         name: 'beep'
+// //     }
+// // };
+//
+//
+// const object = {
+//     a: 'somestring',
+//     b: 42,
+//     c: false,
+//     d: {
+//         name: 'beep',
+//         c: {
+//             name: 'beep beep'
+//         }
+//     }
+// };
+//
+//
+// // function copy(obj) {
+// //
+// //     let copyObj = {};
+// //
+// //     for (const copyObjKey in obj) {
+// //
+// //         if ( typeof obj[copyObjKey] == 'object') {
+// //             copyObj[copyObjKey] = copy(copyObjKey);
+// //         } else {
+// //             copyObj[copyObjKey] = obj[copyObjKey];
+// //         }
+// //     }
+// //
+// //     return copyObj;
+// // }
+// //
+// //
+// // let copyOb  = copy(object);
+// // console.log(copyOb);
+// //
+// //
+// // object.d.name = "real";
+// //
+// // console.log(copyOb);
+//
+//
+// // var arr1 = [1,2,3,[1,2,3,4, [2,3,4]]];
+// //
+// // function flattenDeep(arr1) {
+// //     return arr1.reduce((acc, val) => Array.isArray(val) ? acc.concat(flattenDeep(val)) : acc.concat(val), []);
+// // // }
+// // // flattenDeep(arr1); // [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]
+// //
+// // const user = {
+// //     age: 35,
+// //     name: 'Wahtang',
+// //     b: {
+// //         name: {
+// //             c: 4
+// //         }
+// //     }
+// // }
+// //
+// // c
+//
+//
+// // function Animal(name) {
+// //     this.name = name
+// //
+// //
+// // }
+// //
+// // Animal.prototype.rum = function (spead) {
+// //     console.log(`i am ran with spead ${spead} km/h`);
+// // }
+// //
+// //
+// // function Hamster(name, house) {
+// //     this.name = name;
+// //     this.house = house;
+// // }
+//
+//
+// // Hamster.prototype  = Animal.prototype;
+//
+// // Hamster.prototype.__proto__ = Animal.prototype;
+//
+// // Hamster.prototype.rum = function (){
+// //
+// //     console.log('I cant run');
+// // }
+// //
+// //
+// // Hamster.prototype =  Object.create(Animal.prototype)
+// //
+// //
+// // const bosiy  = new Animal('bos','red')
+// // const johny = new Hamster('johan','Red');
+// //
+// // johny.rum(23);
+// // bosiy.rum(10);
+// //
+// //
+//
+// //
+// // const bosya = new Animal('Pascal');
+// // const bosya2 = new Animal('Bos');
+// //
+// //
+// //
+// // bosya.rum(23);
+// // bosya2.rum(50);
+// //
+// //
+//
+//
+// // function Hamster(name,fun) {
+// //     this.name = name;
+// //     this.stomach = [];
+// //     this.fun = fun;
+// //
+// // }
+// //
+// // Hamster.prototype.findFood = function (food){
+// //     this.stomach.push(food)
+// // };
+// //
+// //
+// // const  hum1 = new Hamster('gavrik',function (){
+// //     console.log('www');
+// // });
+// // const  rozchoska = new Hamster('rozchoska');
+// //
+// // hum1.findFood('apply');
+// // hum1.findFood('peach');
+// // // hum1.fun()
+// //
+// //
+// // console.log(hum1.stomach);
+// // console.log(rozchoska.stomach);
+//
+//
+//
+// // class  Samurai {
+// //     constructor(name) {
+// //         this.name = name;
+// //     }
+// //     hellow() {
+// //         console.log(this.name);
+// //     }
+// // }
+
+
+// let shogun = new Samurai('Yarik');
+// console.log(shogun.__proto__.__proto__ ===  Object.prototype );
+// // console.log(shogun.__proto__.constructor.__proto__ === );
+// console.log(shogun.__proto__.__proto__.__proto__ === );
+
+// console.log(shogun.__proto__.__proto__);
+
+
+function Animal(name) {
+    this.name = name;
+}
+Animal.prototype.ran = function (spead) {
+    console.log(`ran with ${spead}`);
+}
+function Humster (name,house){
+this.name = name;
+this.house = house;
+}
+
+
+const bosya = new Animal('animal');
+const hamster = new Humster('York','red');
+
+Humster.prototype = Object.create(Animal.prototype);
+
+bosya.ran(10);
+hamster.ran(223456);

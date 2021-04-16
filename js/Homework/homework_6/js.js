@@ -285,8 +285,8 @@
 //     return acum;
 // },[]);
 // console.log(reduce);
-
-//Повний масив із зміннами
+//
+// Повний масив із зміннами
 // let reduce = usersWithAddress.reduce((acum, curentValue) => {
 //     if (curentValue.isMarried && curentValue.age > 30) {
 //         curentValue.child = true;
@@ -310,7 +310,7 @@
 //     {id: 7, name: 'olya', age: 31, isMarried: false, address: {city: 'Lviv', street: 'Naukova', number: 16}},
 //     {id: 11, name: 'max', age: 31, isMarried: true, address: {city: 'Rivne', street: 'Ivana Franka', number: 121}}
 // ];
-
+//
 // const userClone = users.reduce((acc, value) =>  value.isMarried ? [...acc,{...value,hasHouse : true}] :  acc, [])
 //
 // console.log(userClone);
@@ -472,3 +472,17 @@
 // console.log(findStatAndEnd(Arr, 1));
 // console.log(findStatAndEnd(Arr, 4));
 // console.log(findStatAndEnd(Arr, 22));
+
+
+
+// Деструктуризація витягує значення з обєкту , тобто копіює примітив?Він не копіює силку на значення
+
+
+
+
+
+
+
+
+
+
