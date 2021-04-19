@@ -906,14 +906,71 @@
 // }
 
 
+// -- Взяти масив юзерів
+// Створити три чекбокси. Кожний з них активує фільтр для вищевказаного масиву. Фільтри можуть працювати як разом так і окремо.
+// 1й - відфільтровує юзерів зі статусом false (залишає зі статусом false)
+// 2й - залишає старших 29 років включно
+// 3й - залишає тих в кого місто Київ
+// Дані виводить в документ
+const usersWithAddress = [
+    {id: 9, name: 'vasya', age: 31, isMarried: false, address: {city: 'Kyiv', street: 'Gongadze', number: 16}},
+    {id: 2, name: 'petya', age: 30, isMarried: true, address: {city: 'Rivne', street: 'Zelena', number: 1}},
+    {id: 4, name: 'kolya', age: 29, isMarried: true, address: {city: 'Lviv', street: 'Pasichna', number: 121}},
+    {id: 3, name: 'olya', age: 28, isMarried: false, address: {city: 'Rivne', street: 'Shevchenko', number: 90}},
+    {id: 8, name: 'max', age: 30, isMarried: true, address: {city: 'Lviv', street: 'Kriva Lipa', number: 115}},
+    {id: 6, name: 'anya', age: 31, isMarried: false, address: {city: 'Lviv', street: 'Shevchenko', number: 2}},
+    {id: 10, name: 'oleg', age: 28, isMarried: false, address: {city: 'Kyiv', street: 'Centralna', number: 22}},
+    {id: 5, name: 'andrey', age: 29, isMarried: true, address: {city: 'Lviv', street: 'Gorodotska', number: 43}},
+    {id: 1, name: 'masha', age: 30, isMarried: true, address: {city: 'Kyiv', street: 'Peremogi', number: 12}},
+    {id: 7, name: 'olya', age: 31, isMarried: false, address: {city: 'Lviv', street: 'Naukova', number: 16}},
+    {id: 11, name: 'max', age: 31, isMarried: true, address: {city: 'Rivne', street: 'Ivana Franka', number: 121}}
+];
 
-console.log(navigator);
+
+const form = document.getElementById('form');
+
+form.oninput = ({target: {id, name, checked}}) => {
+    let checkedArray = [];
+
+    for (const formElemChecked of form) {
+        let nameItem = formElemChecked.name;
+        if (formElemChecked.checked) {
+            checkedArray.push({[nameItem]: formElemChecked.checked});
+        } else {
+            checkedArray.push({[nameItem]: formElemChecked.checked});
+        }
+    }
+    let result = usersWithAddress;
+    for (const itemChecked of checkedArray) {
+        switch (true) {
+            case itemChecked.filterStatus:
+                result = result.filter((el) => !(el.isMarried));
+                break;
+            case itemChecked.filterOldest:
+                result = result.filter((el) => el.age > 29);
+                break;
+            case itemChecked.filterCity:
+                result = result.filter((el) => el.address.city === 'Kyiv');
+                break;
+        }
+    }
+
+let flag = document.getElementById('flag');
+     if(flag){
+           flag.remove();
+     }
+
+    const divResult = document.createElement('div');
+    divResult.setAttribute('id', 'flag');
+    document.body.appendChild(divResult);
+    for (const resultsItem of result) {
+        const itemResults = document.createElement('div');
+        itemResults.innerText = JSON.stringify(resultsItem);
+        divResult.appendChild(itemResults);
+    }
 
 
-
-
-
-
+}
 
 
 
