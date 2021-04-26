@@ -95,28 +95,53 @@ forwardBtn.onclick = () => {
 // --Каждому контакту добавить кнопку редактироваиня. При нажати на нее появляется форма, в которой есть все необходимые инпуты для редактирования, которые уже заполнены данными объекта
 
 
+const usersDiv = document.getElementById('users');
+const formNoteBook = document.forms.noteBook;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const show = () => {
+    usersDiv.innerText = null;
+    const arr = JSON.parse(localStorage.getItem('users')) || [];
+    arr.forEach((elem, index) => {
+        const container = document.createElement('div');
+        const content = document.createElement('div');
+        content.innerText = JSON.stringify(elem);
+        container.appendChild(content);
+        const deleteBtn = document.createElement('button');
+        const editBtn = document.createElement('button');
+        deleteBtn.innerText = 'delete';
+        editBtn.innerText = 'edit';
+        editBtn.onclick = function () {
+            const elemEdit = JSON.parse(this.parentElement.firstElementChild.innerHTML);
+            const arr = JSON.parse(localStorage.getItem('users'));
+            arr.splice(index, 1);
+            for (const elem in elemEdit) {
+                formNoteBook[elem].value = elemEdit[elem];
+            }
+            localStorage.setItem('users', JSON.stringify(arr));
+        }
+        deleteBtn.onclick = () => {
+            const arr = JSON.parse(localStorage.getItem('users'))
+            arr.splice(index, 1);
+            localStorage.setItem('users', JSON.stringify(arr));
+            show();
+        }
+        container.appendChild(deleteBtn);
+        container.appendChild(editBtn);
+        usersDiv.appendChild(container)
+    })
+}
+show();
+document.getElementById('save').onclick = () => {
+    const arr = JSON.parse(localStorage.getItem('users')) || [];
+    const obj = {};
+    for (const item of formNoteBook) {
+        obj[item.name] = item.value;
+    }
+    arr.push(obj);
+    localStorage.setItem('users', JSON.stringify(arr));
+    formNoteBook.reset();
+    show();
+}
 
 
 
