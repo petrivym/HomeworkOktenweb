@@ -94,79 +94,32 @@ forwardBtn.onclick = () => {
 // --Каждому контакту добавить кнопку для удаления контакта.
 // --Каждому контакту добавить кнопку редактироваиня. При нажати на нее появляется форма, в которой есть все необходимые инпуты для редактирования, которые уже заполнены данными объекта
 
-const formNotebook = document.getElementById('form-info');
-const formNotebookSaveBtn = document.getElementById('save');
-const FORMFIELD = 'FORMFIELD';
-let colectionDeleteBtn = document.querySelectorAll('[name = "delete"]');
-
-if (!(localStorage.getItem(FORMFIELD))) {
-    localStorage.setItem(FORMFIELD, '[]')
-}
-
-const localStorageObj = JSON.parse(localStorage.getItem(FORMFIELD));
-for (const localStorageArray of localStorageObj) {
-    const divInfo = document.createElement("div");
-    const deleteBtn = document.createElement("button");
-    const removeBtn = document.createElement("button");
-    deleteBtn.setAttribute('name', 'delete');
-    removeBtn.setAttribute('name', 'remove');
-    divInfo.innerText = JSON.stringify(localStorageArray);
-    deleteBtn.innerText = 'delete';
-    removeBtn.innerText = 'remove';
-
-    divInfo.appendChild(deleteBtn)
-    divInfo.appendChild(removeBtn)
-    document.body.appendChild(divInfo);
-    colectionDeleteBtn = document.querySelectorAll('[name = "delete"]');
-}
 
 
-formNotebookSaveBtn.onclick = () => {
-    const obj = {};
-    const arrayStorage = JSON.parse(localStorage.getItem(FORMFIELD));
-
-    for (const formNotebookElement of formNotebook) {
-        obj[formNotebookElement.name] = formNotebookElement.value;
-    }
-    arrayStorage.push(obj);
-    localStorage.setItem(FORMFIELD, JSON.stringify(arrayStorage));
 
 
-    const objInfo = JSON.parse(localStorage.getItem(FORMFIELD));
-
-    const divInfo = document.createElement("div");
-    const deleteBtn = document.createElement("button");
-    const removeBtn = document.createElement("button");
-    deleteBtn.setAttribute('name', 'delete');
-    divInfo.innerText = JSON.stringify(objInfo[(objInfo.length - 1)]);
-    deleteBtn.innerText = 'delete';
-    removeBtn.innerText = 'remove';
-
-    divInfo.appendChild(deleteBtn);
-    divInfo.appendChild(removeBtn);
-    document.body.appendChild(divInfo);
-    colectionDeleteBtn = document.querySelectorAll('[name = "delete"]');
-
-    deleteInfo();
-
-}
-
-deleteInfo();
 
 
-function deleteInfo(){
-    for (let i = 0; i < colectionDeleteBtn.length; i++) {
 
-        colectionDeleteBtn[i].onclick = (target) => {
-            const arrayStorage = JSON.parse(localStorage.getItem(FORMFIELD));
-            arrayStorage.splice(i, 1);
-            localStorage.setItem(FORMFIELD, JSON.stringify(arrayStorage));
-            target.path[1].remove();
-        }
-            colectionDeleteBtn = document.querySelectorAll('[name = "delete"]');
 
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
